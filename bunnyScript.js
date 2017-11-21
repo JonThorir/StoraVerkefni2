@@ -7,9 +7,9 @@ backButton.addEventListener('click', function() {
   myndband.currentTime -= 3;
 });
 
-//Spila/Pásu takki
-var playPauseButton = document.querySelector('.playpause');
-playPauseButton.addEventListener('click', function() {
+//Spila pásu takki overlay
+var playPauseButtonB = document.querySelector('.playpauseB');
+playPauseButtonB.addEventListener('click', function() {
   if (myndband.paused) {
       myndband.play();
   }
@@ -17,12 +17,30 @@ playPauseButton.addEventListener('click', function() {
       myndband.pause();
     }
 });
-var playpauseMynd = document.getElementById('playpause');
-function breytaplaypauseMynd() {
-  if (playpauseMynd.getAttribute('src') == "play.svg") {
-    playpauseMynd.src = "pause.svg";
+var playpauseMyndB = document.getElementById('playpauseB');
+function breytaplaypauseMyndB() {
+  if (playpauseMyndB.getAttribute('src') == "play.svg") {
+    playpauseMyndB.src = "pause.svg";
   } else {
-    playpauseMynd.src = "play.svg";
+    playpauseMyndB.src = "play.svg";
+  }
+}
+//Spila/Pásu takki undir
+var playPauseButtonA = document.querySelector('.playpauseA');
+playPauseButtonA.addEventListener('click', function() {
+  if (myndband.paused) {
+      myndband.play();
+  }
+  else {
+      myndband.pause();
+    }
+});
+var playpauseMyndA = document.getElementById('playpauseA');
+function breytaplaypauseMyndA() {
+  if (playpauseMyndA.getAttribute('src') == "play.svg") {
+    playpauseMyndA.src = "pause.svg";
+  } else {
+    playpauseMyndA.src = "play.svg";
   }
 }
 
